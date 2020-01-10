@@ -1,0 +1,26 @@
+<a href="/members" class="btn btn-info mb-3"><i class="fa fa-plus pr-2"></i>Create new Member</a>
+<h3>{{ viewTitle }}</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Adresse</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each members}} 
+            <tr>
+                <td>{{this.nom}}</td>
+                <td>{{this.prenom}}</td>
+                <td>{{this.Adresse}}</td>
+                <td>
+                    <a href="/members/update/{{this._id}}"><i class="fa fa-edit" style="color:rgb(60, 196, 60);"></i></a>
+                    <a href="/members/delete/{{this._id}}"><i class="fa fa-trash" style="color:red;"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

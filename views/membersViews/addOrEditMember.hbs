@@ -1,0 +1,28 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/members/add" method="POST">
+    <input type="hidden" name="_id" value="{{members._id}}">
+    <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" class="form-control" placeholder="Nom" id="nom" value="{{members.nom}}">
+    </div>
+    <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" class="form-control" placeholder="Prénom" id="nom" value="{{members.prenom}}">
+    </div>
+    <div class="form-group">
+        <label for="adresse">Adresse</label>
+        <input type="text" name="adresse" class="form-control" placeholder="Adresse" id="adresse" value="{{members.Adresse}}">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info">Add <i class="fa fa-database"></i></button>
+    </div>
+    <div class="form-group">
+        <a href="/members/allMembers" class="btn btn-info mb-3">
+            Go to List
+            <i class="fa fa-arrow-right" ></i>
+        </a>
+    </div>
+
+
+</form>
